@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres para suportar caracteres especiais -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Torna a página responsiva em dispositivos móveis -->
+    <meta name="description" content="Uma página sobre a web novel Shadow Slave, escrita por Guiltythree.">
+    <!-- Descrição da página -->
+    <title>Formulario</title> <!-- O título da página que aparece na aba do navegador -->
+    <link rel="stylesheet" href="styles.css"> <!-- Arquivo de estilos CSS para a formatação da página -->
+</head>
+
+<body>
+    <!-- Menu de Navegação -->
+    <nav>
+        <ul>
+            <!-- Links de navegação para outras páginas -->
+            <li><a href="index.html">Início</a></li> <!-- Link para a página inicial -->
+            <li><a href="index.html#sobre">Sobre</a></li>
+            <li><a href="index.html#personagens">Personagens</a></li>
+            <li><a href="index.html#tabela-links">Links Úteis</a></li>
+            <li><a href="form.html">Formulário</a></li> <!-- Link para a página do formulário -->
+        </ul>
+    </nav>
+
+    <!-- Formulário de Comentários -->
+    <div id="formulario">
+        <h1>Deixe seu comentário</h1> <!-- Título da seção -->
+        <form action="legal.php" method="post"> <!-- Formulário que envia os dados para o arquivo 'legal.php' -->
+            <fieldset style="padding: 30px;"> <!-- Agrupamento de campos com uma borda -->
+                <!-- Campo para o nome completo -->
+                <label for="nome">Nome completo</label>
+                <input type="text" id="nome" name="nome" maxlength="100" required
+                    placeholder="Digite seu nome completo">
+
+                <!-- Campo para o e-mail -->
+                <label for="email">E-mail</label>
+                <input type="email" id="email" name="email" required placeholder="Digite seu e-mail">
+
+                <!-- Campo para a senha -->
+                <label for="senha">Senha</label>
+                <input type="password" id="senha" name="senha" minlength="4" required placeholder="Digite uma senha">
+
+                <!-- Campo para a data de nascimento -->
+                <label for="data-nascimento">Data de nascimento</label>
+                <input type="date" id="data-nascimento" name="data-nascimento" required>
+
+                <!-- Campo para o telefone -->
+                <label for="telefone">Número de telefone:</label>
+                <input type="tel" id="telefone" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+
+                <!-- Campo de seleção para o país -->
+                <label for="pais">Selecione seu país</label>
+                <select id="pais" name="pais" required>
+                    <option value="" disabled selected>Selecione seu país</option>
+                    <!-- Opção padrão que não pode ser selecionada -->
+                    <option value="brasil">Brasil</option>
+                    <option value="argentina">Argentina</option>
+                    <option value="portugal">Portugal</option>
+                    <option value="estados-unidos">Estados Unidos</option>
+                </select>
+
+                <!-- Campo de seleção de gênero -->
+                <fieldset> <!-- Agrupamento de opções de gênero -->
+                    <legend>Selecione seu gênero:</legend> <!-- Título do grupo de opções -->
+                    <input type="radio" name="sexo" id="masc" required>
+                    <label for="masc">Masculino</label><br> <!-- Opção Masculino -->
+                    <input type="radio" name="sexo" id="fem" required>
+                    <label for="fem">Feminino</label><br> <!-- Opção Feminino -->
+                    <input type="radio" name="sexo" id="outro" required>
+                    <label for="outro">Outro</label> <!-- Opção Outro -->
+                </fieldset>
+
+                <!-- Campo para deixar um comentário -->
+                <label for="comentarios">Deixe seu comentário</label>
+                <textarea id="comentarios" name="comentarios" placeholder="Deixe seu comentário"></textarea>
+
+                <!-- Campo para aceitar os termos e condições -->
+                <label for="termos">
+                    <input type="checkbox" id="termos" name="termos" required> Aceito os termos e condições
+                </label>
+
+                <!-- Botões de envio e reset -->
+                <input type="submit" value="Enviar"> <!-- Botão de envio do formulário -->
+                <input type="reset" value="Limpar"> <!-- Botão para limpar os campos do formulário -->
+            </fieldset>
+        </form>
+    </div>
+
+</body>
+
+</html>

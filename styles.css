@@ -1,0 +1,319 @@
+/* Estilos gerais para o corpo da página */
+body {
+    background-color: #121212; /* Fundo preto, dá um ar mais moderno e clean */
+    color: #ffffff; /* Cor branca pra destacar o texto na tela escura */
+    font-family: 'Arial', sans-serif; /* Fonte simples e legível */
+    margin: 0; /* Retira a margin padrão do body */
+    padding: 0; /* Retira o espaçamento do body */
+    overflow-x: hidden; /* Impede o scroll horizontal */
+}
+
+/* Header */
+header {
+    background-color: #333; /* Fundo escuro pro cabeçalho */
+    padding: 10px; /* Um padding legal pra não ficar tudo encostado */
+    text-align: center; /* Tudo centralizado no cabeçalho */
+}
+
+header h1 {
+    margin: 0; /* Sem margem em volta do título */
+    color: #ff4500; /* Cor laranja pro título, destaca bem */
+}
+
+/* Menu de Navegação */
+nav {
+    display: flex; /* Usando flexbox pra organizar os itens do menu */
+    justify-content: center; /* Centraliza os itens */
+    background-color: #222; /* Cor de fundo escura do menu */
+    padding: 0;
+    width: fit-content; /* O menu ajusta a largura automaticamente */
+    margin: 10px auto; /* Centraliza com margem em cima e embaixo */
+}
+
+nav ul {
+    list-style-type: none; /* Remove os pontinhos das listas */
+    padding: 0;
+    margin: 0;
+    display: flex; /* Flexbox pra alinhar os itens do menu */
+    border: 2px solid #ff4500; /* Borda laranja em volta do menu */
+    border-radius: 8px; /* Bordas arredondadas */
+}
+
+nav ul li {
+    margin: 0; /* Remove o espaço entre os itens */
+}
+
+nav ul li a {
+    display: block; /* Faz com que o link ocupe toda a área do item */
+    padding: 12px 20px; /* Espaçamento dentro do link */
+    text-decoration: none; /* Remove o underline do link */
+    color: #ffffff; /* Texto branco nos links */
+    font-size: 1.2em; /* Tamanho da fonte maior */
+}
+
+/* Efeito hover nos links do menu */
+nav ul li a:hover {
+    color: #f1f1f1;
+    background-color: rgba(255, 69, 0, 0.5); /* Efeito de cor laranja quando passa o mouse */
+    border-radius: 5px; /* Arredonda um pouco mais as bordas no hover */
+}
+
+/* Seções principais */
+section {
+    padding: 5px; /* Espaço interno das seções */
+    margin: 50px; /* Margem externa pra separar as seções */
+    background-color: #333; /* Fundo escuro para as seções */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 2px solid #333; /* Borda igual ao fundo */
+}
+
+h1, h2, h3 {
+    color: #ff4500; /* Títulos laranjas pra dar destaque */
+    margin-bottom: 10px; /* Espaço abaixo dos títulos */
+}
+
+p {
+    line-height: 1.4; /* Melhor espaçamento entre as linhas */
+}
+
+/* Container para a imagem e as informações */
+.sobre-container {
+    display: flex; /* Flexbox para alinhar imagem e texto */
+    align-items: flex-start; /* Alinha os itens no topo */
+    justify-content: flex-start; /* Mantém os itens bem próximos */
+    gap: 40px; /* Espaçamento entre imagem e texto */
+    margin-top: 20px;
+    margin-left: 30px; /* Deixa a margem da esquerda maior */
+    margin-right: 30px; /* E da direita também */
+    margin-bottom: 30px;
+}
+
+/* Estilo da imagem */
+.imagem-sobre {
+    width: 35%; /* A imagem não vai ocupar muito espaço */
+    max-width: 300px; /* Limita o tamanho máximo da imagem */
+    border-radius: 8px; /* Arredonda as bordas da imagem */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Sombra leve na imagem */
+}
+
+/* Estilo das informações */
+.informacoes-sobre {
+    width: 60%; /* O texto ocupa mais espaço que a imagem */
+    color: #f1f1f1; /* Cor clara pro texto */
+}
+
+.informacoes-sobre h2 {
+    color: #ff4500; /* Títulos das informações em laranja */
+    margin-bottom: 10px;
+}
+
+.informacoes-sobre p {
+    font-size: 1.1em; /* Tamanho da fonte um pouco maior */
+    line-height: 1.6; /* Espaçamento entre as linhas */
+    color: #f1f1f1; /* Cor branca pra melhor contraste */
+    text-align: justify; /* Justificado pra ficar bonito e organizado */
+}
+
+.sobre-a-obra{
+    background-color: #444; /* Fundo escuro pra sinopse, combina com o resto */
+    padding: 15px; /* Espaço interno legal */
+    border-radius: 8px; /* Borda arredondada */
+    margin-top: 20px; /* Espaço acima */
+}
+
+/* Estilo da sinopse */
+.sinopse {
+    background-color: #444; /* Fundo escuro pra sinopse, combina com o resto */
+    padding: 15px; /* Espaço interno legal */
+    border-radius: 8px; /* Borda arredondada */
+    margin-top: 20px; /* Espaço acima */
+}
+
+.sinopse p {
+    margin: 0; /* Remove as margens do parágrafo */
+}
+
+/* Tabela de links */
+table {
+    width: 100%; /* A tabela ocupa 100% da largura */
+    border: 2px solid #716f6f; /* Borda cinza suave */
+    margin-top: 20px; /* Espaço acima */
+    background-color: #1b1b1b; /* Fundo escuro da tabela */
+    border-radius: 5px; /* Bordas arredondadas */
+    overflow: hidden; /* Não deixa nada escapar das bordas */
+}
+
+table th, table td {
+    padding: 15px; /* Espaçamento nas células */
+    text-align: left; /* Alinhamento do texto à esquerda */
+    color: #fff; /* Cor do texto em branco */
+}
+
+table th {
+    background-color: #716f6f; /* Cabeçalho da tabela com fundo cinza */
+    color: #fff; /* Cor do texto do cabeçalho em branco */
+    font-weight: bold; /* Deixa o texto do cabeçalho mais forte */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Sombreamento suave no cabeçalho */
+}
+
+table tr:nth-child(even) {
+    background-color: #272525; /* Linhas pares com fundo levemente diferente */
+}
+
+table tr:hover {
+    background-color: #555; /* Efeito de hover nas linhas */
+}
+
+table a {
+    color: #f1f1f1; /* Cor do link em branco */
+    text-decoration: none; /* Retira o sublinhado dos links */
+}
+
+table a:hover {
+    color: #ff7f00; /* Cor do link no hover (laranja) */
+    text-decoration: underline; /* Sublinha o link ao passar o mouse */
+}
+
+#tabela-links h3 {
+    text-align: center; /* Título da tabela centralizado */
+    color: #ff4500; /* Cor do título em branco */
+}
+
+/* Links */
+a {
+    color: #66ccff; /* Cor dos links em azul claro */
+    text-decoration: none; /* Sem underline */
+}
+
+a:hover {
+    color: #ff4500; /* Cor laranja quando passar o mouse */
+}
+
+/* Estilos para o formulário */
+form {
+    width: 100%; /* O formulário ocupa a largura toda */
+    max-width: 600px; /* Limita o tamanho máximo do formulário */
+    padding: 20px; /* Espaçamento interno */
+    background-color: #333; /* Fundo escuro */
+    border-radius: 5px; /* Bordas arredondadas */
+    margin: 0 auto; /* Centraliza o formulário */
+}
+
+#formulario h1 {
+    text-align: center; /* Título centralizado */
+}
+
+form h2 {
+    margin: 10px 0; /* Margem em cima e embaixo dos subtítulos */
+    color: #ff4500; /* Subtítulos em laranja */
+    text-align: center; /* Centraliza os subtítulos */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+input[type="date"],
+select,
+textarea {
+    width: 100%; /* Todos os campos ocupam a largura total */
+    padding: 8px; /* Espaçamento dentro dos campos */
+    margin-bottom: 12px; /* Espaçamento entre os campos */
+    border: 1px solid #555; /* Borda dos campos */
+    background-color: #222; /* Cor de fundo dos campos */
+    color: #f1f1f1; /* Texto dentro dos campos em branco */
+}
+
+textarea {
+    resize: vertical; /* Permite redimensionar a área de texto */
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #ff4500; /* Cor laranja nos botões */
+    color: #fff; /* Texto branco nos botões */
+    border: none; /* Sem borda */
+    padding: 10px 20px; /* Padding dos botões */
+    cursor: pointer; /* Mostra que é clicável */
+    margin-right: 10px; /* Espaçamento entre os botões */
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #e03e00; /* Cor mais escura ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+    background-color: #333; /* Fundo escuro do rodapé */
+    padding: 15px; /* Padding do rodapé */
+    text-align: center; /* Centraliza o texto */
+    color: #f1f1f1; /* Cor do texto */
+    position: relative; /* Faz o rodapé ficar no final da página */
+    bottom: 0;
+    width: 100%; /* O rodapé ocupa toda a largura */
+}
+
+footer a {
+    color: #66ccff; /* Links no rodapé em azul claro */
+}
+
+footer a:hover {
+    color: #ff4500; /* Laranja no hover dos links do rodapé */
+}
+
+/* Seção de Personagens */
+#personagens {
+    text-align: left;
+    background-color: #222; /* Fundo escuro */
+    padding: 20px;
+    border-radius: 10px;
+    color: white; /* Texto branco */
+}
+
+#personagens h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.galeria-personagens {
+    display: flex;
+    justify-content: center; /* Centraliza as imagens horizontalmente */
+    gap: 15px;
+    padding-bottom: 10px;
+    flex-wrap: wrap; /* Permite que as imagens quebrem para a linha seguinte, se necessário */
+}
+
+.personagem {
+
+    background-color: #333;
+    padding: 10px;
+    border-radius: 8px;
+    max-width: 300px; /* Limita a largura máxima para não ficar excessivamente grande */
+    margin: 10px; /* Espaçamento entre os itens */
+}
+
+.personagem img {
+    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
+    height: auto; /* Mantém a proporção da imagem */
+    border-radius: 8px;
+}
+
+#personagens hr {
+        border: 0; /* Remove a borda padrão */
+        height: 2px; /* Define a altura da linha */
+        background-color: #ff4500; /* Cor de fundo para a linha */
+        margin: 20px 0; /* Margens em cima e embaixo */
+}
+
+.personagem h3 {
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.personagem p {
+    font-size: 14px;
+    color: #ccc;
+    text-align: justify;
+}
