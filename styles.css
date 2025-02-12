@@ -1,3 +1,4 @@
+styles.css
 /* Estilos gerais para o corpo da página */
 body {
     background-color: #121212; /* Fundo preto, dá um ar mais moderno e clean */
@@ -218,17 +219,15 @@ input[type="date"],
 select,
 textarea {
     width: 100%; /* Todos os campos ocupam a largura total */
-    padding: 10px; /* Espaçamento dentro dos campos */
-    margin-bottom: 15px; /* Espaçamento entre os campos */
+    padding: 8px; /* Espaçamento dentro dos campos */
+    margin-bottom: 12px; /* Espaçamento entre os campos */
     border: 1px solid #555; /* Borda dos campos */
     background-color: #222; /* Cor de fundo dos campos */
     color: #f1f1f1; /* Texto dentro dos campos em branco */
-    border-radius: 5px; /* Bordas arredondadas para os campos */
 }
 
 textarea {
-    resize: vertical;
-    height: 150px; /* Define uma altura fixa para a área de comentário */
+    resize: vertical; /* Permite redimensionar a área de texto */
 }
 
 input[type="submit"],
@@ -236,69 +235,62 @@ input[type="reset"] {
     background-color: #ff4500; /* Cor laranja nos botões */
     color: #fff; /* Texto branco nos botões */
     border: none; /* Sem borda */
-    padding: 10px 20px; /* Espaçamento interno nos botões */
-    border-radius: 5px; /* Bordas arredondadas */
-    width: 48%; /* O tamanho dos botões vai ocupar quase toda a largura */
-    margin: 10px 1%; /* Espaçamento entre os botões */
+    padding: 10px 20px; /* Padding dos botões */
+    cursor: pointer; /* Mostra que é clicável */
+    margin-right: 10px; /* Espaçamento entre os botões */
 }
 
 input[type="submit"]:hover,
 input[type="reset"]:hover {
-    background-color: #e94e00; /* Altera a cor do botão ao passar o mouse */
+    background-color: #e03e00; /* Cor mais escura ao passar o mouse */
 }
 
-input[type="submit"]:active,
-input[type="reset"]:active {
-    transform: scale(0.98); /* Efeito de clique nos botões */
+/* Rodapé */
+footer {
+    background-color: #333; /* Fundo escuro do rodapé */
+    padding: 15px; /* Padding do rodapé */
+    text-align: center; /* Centraliza o texto */
+    color: #f1f1f1; /* Cor do texto */
+    position: relative; /* Faz o rodapé ficar no final da página */
+    bottom: 0;
+    width: 100%; /* O rodapé ocupa toda a largura */
 }
 
-/* Ajustes responsivos */
-@media screen and (max-width: 768px) {
-    body {
-        padding: 10px; /* Diminui o padding para telas menores */
-    }
+footer a {
+    color: #66ccff; /* Links no rodapé em azul claro */
+}
 
-    nav ul {
-        flex-direction: column; /* Menu empilhado em telas pequenas */
-    }
+footer a:hover {
+    color: #ff4500; /* Laranja no hover dos links do rodapé */
+}
 
-    nav ul li {
-        margin-bottom: 10px;
-    }
+/* Seção de Personagens */
+#personagens {
+    display: flex; /* Usando flexbox para alinhar as imagens horizontalmente */
+    justify-content: space-around; /* Espaçamento uniforme entre as imagens */
+    gap: 20px; /* Espaçamento entre as imagens */
+    flex-wrap: wrap; /* Permite que as imagens se movam para a linha seguinte em telas menores */
+    padding: 5px; /* Espaço interno das seções */
+    margin: 50px; /* Margem externa pra separar as seções */
+    background-color: #333; /* Fundo escuro para as seções */
+    border-radius: 8px;
+    margin-bottom: 20px;
+    border: 2px solid #333; /* Borda igual ao fundo */
+}
 
-    .sobre-container {
-        flex-direction: column; /* Alinha a imagem e o texto verticalmente */
-        margin-left: 0;
-        margin-right: 0;
-        margin-top: 0;
-    }
+#personagens .personagem {
+    text-align: center; /* Centraliza o texto (título e descrição) abaixo da imagem */
+    width: 25%; /* A largura das "caixas" para imagem + título + info */
+    max-width: 250px; /* Limita o tamanho máximo */
+    margin-bottom: 30px; /* Espaço abaixo de cada "caixa" */
+}
 
-    .imagem-sobre {
-        width: 100%; /* A imagem ocupa toda a largura */
-        max-width: 100%;
-        margin-bottom: 20px;
-    }
+.personagem p {
+text-align: justify;
+}
 
-    .informacoes-sobre {
-        width: 100%;
-    }
-
-    .formulario {
-        width: 100%;
-        padding: 15px;
-    }
-
-    input[type="submit"], input[type="reset"] {
-        width: 100%; /* Botões ocupam a largura total */
-        margin-right: 0; /* Remove o espaço entre os botões */
-        margin-top: 10px; /* Adiciona espaço entre os botões */
-    }
-
-    .galeria-personagens {
-        flex-direction: column;
-    }
-
-    .personagem {
-        width: 100%;
-    }
+#personagens img {
+    width: 100%; /* A imagem ocupa toda a largura disponível dentro da "caixa" */
+    border-radius: 8px; /* Bordas arredondadas nas imagens */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra suave nas imagens */
 }
