@@ -218,15 +218,17 @@ input[type="date"],
 select,
 textarea {
     width: 100%; /* Todos os campos ocupam a largura total */
-    padding: 8px; /* Espaçamento dentro dos campos */
-    margin-bottom: 12px; /* Espaçamento entre os campos */
+    padding: 10px; /* Espaçamento dentro dos campos */
+    margin-bottom: 15px; /* Espaçamento entre os campos */
     border: 1px solid #555; /* Borda dos campos */
     background-color: #222; /* Cor de fundo dos campos */
     color: #f1f1f1; /* Texto dentro dos campos em branco */
+    border-radius: 5px; /* Bordas arredondadas para os campos */
 }
 
 textarea {
-    resize: vertical; /* Permite redimensionar a área de texto */
+    resize: vertical;
+    height: 150px; /* Define uma altura fixa para a área de comentário */
 }
 
 input[type="submit"],
@@ -234,86 +236,69 @@ input[type="reset"] {
     background-color: #ff4500; /* Cor laranja nos botões */
     color: #fff; /* Texto branco nos botões */
     border: none; /* Sem borda */
-    padding: 10px 20px; /* Padding dos botões */
-    cursor: pointer; /* Mostra que é clicável */
-    margin-right: 10px; /* Espaçamento entre os botões */
+    padding: 10px 20px; /* Espaçamento interno nos botões */
+    border-radius: 5px; /* Bordas arredondadas */
+    width: 48%; /* O tamanho dos botões vai ocupar quase toda a largura */
+    margin: 10px 1%; /* Espaçamento entre os botões */
 }
 
 input[type="submit"]:hover,
 input[type="reset"]:hover {
-    background-color: #e03e00; /* Cor mais escura ao passar o mouse */
+    background-color: #e94e00; /* Altera a cor do botão ao passar o mouse */
 }
 
-/* Rodapé */
-footer {
-    background-color: #333; /* Fundo escuro do rodapé */
-    padding: 15px; /* Padding do rodapé */
-    text-align: center; /* Centraliza o texto */
-    color: #f1f1f1; /* Cor do texto */
-    position: relative; /* Faz o rodapé ficar no final da página */
-    bottom: 0;
-    width: 100%; /* O rodapé ocupa toda a largura */
+input[type="submit"]:active,
+input[type="reset"]:active {
+    transform: scale(0.98); /* Efeito de clique nos botões */
 }
 
-footer a {
-    color: #66ccff; /* Links no rodapé em azul claro */
-}
+/* Ajustes responsivos */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 10px; /* Diminui o padding para telas menores */
+    }
 
-footer a:hover {
-    color: #ff4500; /* Laranja no hover dos links do rodapé */
-}
+    nav ul {
+        flex-direction: column; /* Menu empilhado em telas pequenas */
+    }
 
-/* Seção de Personagens */
-#personagens {
-    text-align: left;
-    background-color: #222; /* Fundo escuro */
-    padding: 20px;
-    border-radius: 10px;
-    color: white; /* Texto branco */
-}
+    nav ul li {
+        margin-bottom: 10px;
+    }
 
-#personagens h2 {
-    font-size: 24px;
-    margin-bottom: 15px;
-}
+    .sobre-container {
+        flex-direction: column; /* Alinha a imagem e o texto verticalmente */
+        margin-left: 0;
+        margin-right: 0;
+        margin-top: 0;
+    }
 
-.galeria-personagens {
-    display: flex;
-    justify-content: center; /* Centraliza as imagens horizontalmente */
-    gap: 15px;
-    padding-bottom: 10px;
-    flex-wrap: wrap; /* Permite que as imagens quebrem para a linha seguinte, se necessário */
-}
+    .imagem-sobre {
+        width: 100%; /* A imagem ocupa toda a largura */
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
 
-.personagem {
+    .informacoes-sobre {
+        width: 100%;
+    }
 
-    background-color: #333;
-    padding: 10px;
-    border-radius: 8px;
-    max-width: 300px; /* Limita a largura máxima para não ficar excessivamente grande */
-    margin: 10px; /* Espaçamento entre os itens */
-}
+    .formulario {
+        width: 100%;
+        padding: 15px;
+    }
 
-.personagem img {
-    width: 100%; /* Faz a imagem ocupar toda a largura do contêiner */
-    height: auto; /* Mantém a proporção da imagem */
-    border-radius: 8px;
-}
+    input[type="submit"], input[type="reset"] {
+        width: 100%; /* Botões ocupam a largura total */
+        margin-right: 0; /* Remove o espaço entre os botões */
+        margin-top: 10px; /* Adiciona espaço entre os botões */
+    }
 
-#personagens hr {
-        border: 0; /* Remove a borda padrão */
-        height: 2px; /* Define a altura da linha */
-        background-color: #ff4500; /* Cor de fundo para a linha */
-        margin: 20px 0; /* Margens em cima e embaixo */
-}
+    .galeria-personagens {
+        flex-direction: column;
+    }
 
-.personagem h3 {
-    margin-top: 10px;
-    font-size: 18px;
-}
-
-.personagem p {
-    font-size: 14px;
-    color: #ccc;
-    text-align: justify;
+    .personagem {
+        width: 100%;
+    }
 }
