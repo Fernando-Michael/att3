@@ -1,4 +1,3 @@
-styles.css
 /* Estilos gerais para o corpo da página */
 body {
     background-color: #121212; /* Fundo preto, dá um ar mais moderno e clean */
@@ -269,24 +268,21 @@ footer a:hover {
     display: flex; /* Usando flexbox para alinhar as imagens horizontalmente */
     justify-content: space-around; /* Espaçamento uniforme entre as imagens */
     gap: 20px; /* Espaçamento entre as imagens */
-    flex-wrap: wrap; /* Permite que as imagens se movam para a linha seguinte em telas menores */
+    flex-wrap: nowrap; /* Impede que as imagens quebrem para a linha seguinte */
     padding: 5px; /* Espaço interno das seções */
     margin: 50px; /* Margem externa pra separar as seções */
     background-color: #333; /* Fundo escuro para as seções */
     border-radius: 8px;
     margin-bottom: 20px;
     border: 2px solid #333; /* Borda igual ao fundo */
+    overflow-x: auto; /* Permite o scroll horizontal se as imagens ultrapassarem o limite */
 }
 
 #personagens .personagem {
     text-align: center; /* Centraliza o texto (título e descrição) abaixo da imagem */
-    width: 25%; /* A largura das "caixas" para imagem + título + info */
+    width: 25%; /* Ajuste de largura das "caixas" para imagem + título + info */
     max-width: 250px; /* Limita o tamanho máximo */
     margin-bottom: 30px; /* Espaço abaixo de cada "caixa" */
-}
-
-.personagem p {
-text-align: justify;
 }
 
 #personagens img {
